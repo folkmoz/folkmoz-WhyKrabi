@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+@tailwind base;
+
+body {
+    min-height: 150vh;
+}
+
+a {
+    text-decoration: none;
+}
+
+@tailwind components;
+
+@tailwind utilities;
+
+@layer utilities {
+    .h-100vh {
+        height: 100vh;
+    }
+    .z-1 {
+        z-index: 1;
+    }
+}
