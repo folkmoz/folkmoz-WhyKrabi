@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="96a5fda8-4ae8-4c18-a7ed-451d502aa3c8" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1lCFed75CUeYyjlyGFTiIlir3WE" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="javascript.nodejs.core.library.configured.version" value="12.19.0" />
+    <property name="javascript.nodejs.core.library.typings.version" value="12.19.0" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/images" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\folkm\OneDrive\เดสก์ท็อป\Projects-Web\WhyKrabi\frontend\public\images" />
+      <recent name="C:\Users\folkm\OneDrive\เดสก์ท็อป\Projects-Web\WhyKrabi\frontend\public\images\home" />
+      <recent name="C:\Users\folkm\OneDrive\เดสก์ท็อป\Projects-Web\WhyKrabi\frontend\public\images\icons" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\folkm\OneDrive\เดสก์ท็อป\Projects-Web\WhyKrabi\frontend\public\images\home" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="96a5fda8-4ae8-4c18-a7ed-451d502aa3c8" name="Default Changelist" comment="" />
+      <created>1607093262320</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1607093262320</updated>
+      <workItem from="1607093263396" duration="4000" />
+      <workItem from="1607093276874" duration="4512000" />
+      <workItem from="1607138479345" duration="2740000" />
+      <workItem from="1607227186030" duration="1192000" />
+      <workItem from="1607858189513" duration="1144000" />
+      <workItem from="1607860193951" duration="604000" />
+      <workItem from="1607926247007" duration="1863000" />
+      <workItem from="1608087640596" duration="23931000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1280" y="255" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1607858736440">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1280" y="255" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607858736440" />
+    <state x="922" y="168" key="SettingsEditor" timestamp="1607093845545">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="922" y="168" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1607093845545" />
+    <state x="1153" y="230" width="672" height="678" key="search.everywhere.popup" timestamp="1607139161388">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1153" y="230" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1607139161388" />
+  </component>
+</project>
