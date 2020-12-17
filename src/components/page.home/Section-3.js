@@ -5,7 +5,8 @@ import styled from "styled-components";
 import {Divider} from "@material-ui/core";
 
 const Blogs =styled.section`
-  height: 95vh;
+  height: auto;
+  min-height: 95vh;
   width: 100%;
   position: relative;
   background: url("./images/home/hotel-bg.jpg") center/cover fixed no-repeat;

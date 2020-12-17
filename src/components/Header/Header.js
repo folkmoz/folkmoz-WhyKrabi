@@ -86,18 +86,18 @@ export const Navbar = () => {
                         </span>
                     </div>
                     <Collapse in={maxWidth768px ? isCollapse : true}>
-                        <div className={`menu w-full  justify-end md:mr-4 md:flex`}>
-                            <ul className={'flex flex-col md:flex-row justify-around items-center h-full '}>
-                                {
-                                    menu.map(e => (
-                                        <li
-                                            key={e}
-                                            className={`md:cursor-pointer ${isScroll ? 'text-black' : 'text-white'} p-2 mx-2 hover:text-yellow-400`}><span>{e}</span></li>
-                                    ))
-                                }
-                            </ul>
-                        </div>
-                    </Collapse>
+                    <div className={`menu w-full  justify-end md:mr-4 md:flex`}>
+                        <ul className={'flex flex-col md:flex-row justify-around items-center h-full '}>
+                            {
+                                menu.map(e => (
+                                    <li
+                                        key={e}
+                                        className={`md:cursor-pointer ${isScroll ? 'text-black' : 'text-white'} p-2 mx-2 hover:text-yellow-400`}><span>{e}</span></li>
+                                ))
+                            }
+                        </ul>
+                    </div>
+                </Collapse>
                 </Nav>
             </Toolbar>
         </Header>

@@ -4,16 +4,14 @@ import {Container, Divider} from "@material-ui/core";
 
 const AboutKrabi = styled.section`
   width: 100%;
-  height: 75vh;
-  background: url("./images/home/sec-2.jpg") no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
+  height: auto;
+  min-height: 500px;
+  padding: 1.7rem 0;
+  background: url("./images/home/sec-2.jpg") center/cover fixed no-repeat;
   display: flex;
   align-items: center;
   
-    @media (max-width: 768px) {
-      height: auto;
-    }
+
 `
 
 const Col = styled.div`
