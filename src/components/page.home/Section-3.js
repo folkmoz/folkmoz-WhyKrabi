@@ -22,6 +22,7 @@ const LeftSide = styled.div`
     justify-content: flex-end;
     color: #fff;
     width: 33.333333%;
+    min-height: 95vh;
   
     @media (max-width: 768px) {
       justify-content: center;
