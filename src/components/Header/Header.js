@@ -3,8 +3,9 @@ import Link from "next/link";
 import styled from 'styled-components'
 
 import { Squash as Hamburger } from "hamburger-react";
+import {Collapse} from "@material-ui/core";
 
-import {Toolbar} from '@material-ui/core'
+import {Toolbar, useMediaQuery} from '@material-ui/core'
 import {useScroll} from "../../hooks/useScroll";
 
 const Header = styled.header`
@@ -57,6 +58,8 @@ export const Navbar = () => {
 
     const { isScroll } = useScroll()
 
+    const maxWidth768px = useMediaQuery('(max-width: 768px)')
+
 
     return (
         <Header active={isScroll ? true : undefined}>
@@ -82,17 +85,19 @@ export const Navbar = () => {
                             />
                         </span>
                     </div>
-                    <div className={`menu w-full  justify-end duration-200 transition-all ${isCollapse ? 'block visible' : 'd-none'} md:w-4/6 md:mr-4 md:flex`}>
-                        <ul className={'flex sm:flex-col md:flex-row justify-around items-center h-full '}>
-                            {
-                                menu.map(e => (
-                                    <li
-                                        key={e}
-                                        className={`md:cursor-pointer ${isScroll ? 'text-black' : 'text-white'} p-2 mx-2 hover:text-yellow-400`}><span>{e}</span></li>
-                                ))
-                            }
-                        </ul>
-                    </div>
+                    <Collapse in={maxWidth768px ? isCollapse : true}>
+                        <div className={`menu w-full  justify-end md:mr-4 md:flex`}>
+                            <ul className={'flex flex-col md:flex-row justify-around items-center h-full '}>
+                                {
+                                    menu.map(e => (
+                                        <li
+                                            key={e}
+                                            className={`md:cursor-pointer ${isScroll ? 'text-black' : 'text-white'} p-2 mx-2 hover:text-yellow-400`}><span>{e}</span></li>
+                                    ))
+                                }
+                            </ul>
+                        </div>
+                    </Collapse>
                 </Nav>
             </Toolbar>
         </Header>

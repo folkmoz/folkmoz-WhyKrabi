@@ -10,6 +10,10 @@ const AboutKrabi = styled.section`
   background-attachment: fixed;
   display: flex;
   align-items: center;
+  
+    @media (max-width: 768px) {
+      height: auto;
+    }
 `
 
 const Col = styled.div`
@@ -19,6 +23,10 @@ const Col = styled.div`
   align-items: center;
   height: 350px;
   padding: 0 .5rem;
+
+  @media (max-width: 768px) {
+    padding: 0 3rem;
+  }
   
   .col-icon {
     width: 110px;
@@ -62,7 +70,7 @@ const Section2 = () => {
     return (
         <>
             <AboutKrabi>
-                <Container maxWidth={"lg"} className={'flex justify-around items-center h-3/4 '}>
+                <Container maxWidth={"lg"} className={'flex flex-col justify-around items-center h-3/4 md:flex-row'}>
                     {
                         mockData.map((e, i) => (
                             <Col key={i}>

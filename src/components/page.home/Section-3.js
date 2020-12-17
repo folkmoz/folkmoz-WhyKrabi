@@ -9,6 +9,10 @@ const Blogs =styled.section`
   width: 100%;
   position: relative;
   background: url("./images/home/hotel-bg.jpg") center/cover fixed no-repeat;
+  
+    @media (max-width: 768px) {
+      height: auto;
+    }
 `
 
 const LeftSide = styled.div` 
@@ -16,6 +20,10 @@ const LeftSide = styled.div`
     padding: 3rem 1.8rem 1.5rem;
     display: flex;
     justify-content: flex-end;
+  
+    @media (max-width: 768px) {
+      justify-content: center;
+    }
         
   :before {
     content: '';
@@ -77,8 +85,8 @@ const Section3 = () => {
 
     return (
         <Blogs>
-            <div className={'relative flex w-full h-full z-1'}>
-                <LeftSide className={'w-1/3 text-white'}>
+            <div className={'relative flex flex-col-reverse w-full h-full z-1 md:flex-row'}>
+                <LeftSide className={'w-full text-white md:w-1/3'}>
                     <div style={{maxWidth: 350}}>
                         <h2 className={'text-2xl'}>แหล่งข้อมูลต่าง ๆ</h2>
                         <Divider variant={"fullWidth"} className={'bg-white my-5'} />
@@ -92,7 +100,7 @@ const Section3 = () => {
                                 tabs.map((tab, i) => (
                                     <li
                                         key={tab.title}
-                                        className={`py-2 px-6 my-8 md:cursor-pointer ${i === currentActive ? 'text-yellow-400' : 'text-black'} text-center bg-white hover:text-yellow-400 shadow-md max-w-xs`}
+                                        className={`py-2 px-6 my-8 select-none md:select-auto md:cursor-pointer ${i === currentActive ? 'text-yellow-400' : 'text-black'} text-center bg-white hover:text-yellow-400 shadow-md max-w-xs`}
                                         onClick={() => selectTab(i)}
                                     >
                                         {tab.title}
@@ -102,7 +110,7 @@ const Section3 = () => {
                         </ul>
                     </div>
                 </LeftSide>
-                <div className={'w-2/3 text-white py-16 px-12 h-full'}>
+                <div className={'w-full text-white py-16 px-12 h-full md:w-2/3'}>
                     <div className={'h-full'}>
                         {
                             tabs.map((item, index) => (
@@ -135,12 +143,6 @@ const Section3 = () => {
                     </div>
                 </div>
             </div>
-            {/*<Image
-                layout={'fill'}
-                src={'/images/home/hotel-bg.jpg'}
-                objectFit={"cover"}
-                className={'bg-fixed'}
-            />*/}
         </Blogs>
     );
 }
