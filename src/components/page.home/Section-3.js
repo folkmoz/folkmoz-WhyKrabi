@@ -130,14 +130,14 @@ const Section3 = () => {
                         </ul>
                     </div>
                 </LeftSide>
-                <div className={'w-full text-white h-full pl-4 pr-6 py-16 md:px-12  md:w-2/3'}>
+                <div className={'w-full text-white h-full py-16 md:px-12  md:w-2/3'}>
                     <div className={'h-full'}>
                         {
                             maxWidth768 ? (
                                 <div className={'flex flex-nowrap overflow-x-auto'}>
                                     {
                                         tabs.map((item, index) => (
-                                            <span className={'flex-grow-0 flex-shrink-0 flex-basis-auto max-w-full h-full px-2'} key={item.title}>
+                                            <span style={{maxWidth: 320}} className={'flex-grow-0 flex-shrink-0 flex-basis-auto max-w-full h-full px-2'} key={item.title}>
                                                 <div className={'relative w-full max-w-5xl md:max-w-3xl'} style={{marginBottom: -20}}>
                                                     <Image
                                                         src={item.image}
@@ -148,7 +148,7 @@ const Section3 = () => {
                                                     />
                                                 </div>
                                                 <div style={{height: maxHeight === 0 ? 'auto' : maxHeight}} className={'item py-8 bg-white text-black pl-8 pr-4 max-w-3xl h-full flex flex-col justify-between'}>
-                                                    <span className={'text-4xl'}>{item.title}</span>
+                                                    <span className={'text-2xl'}>{item.title}</span>
                                                     <p className={'text-gray-500 mt-2'}>{item.sub}</p>
                                                     <Link
                                                         href={item.path}
