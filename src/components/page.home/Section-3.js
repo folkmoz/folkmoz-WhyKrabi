@@ -139,7 +139,7 @@ const Section3 = () => {
                                                     <Link
                                                         href={item.path}
                                                     >
-                                                        <a className={'rounded w-2/6 text-white mt-4 inline-block py-2 px-4 bg-gradient-to-r from-blue-400 to-blue-500 hover:from-pink-500 hover:to-orange-500'}>
+                                                        <a style={{maxWidth: 120}} className={'rounded text-white mt-4 inline-block py-2 px-4 bg-gradient-to-r from-blue-400 to-blue-500 hover:from-pink-500 hover:to-orange-500'}>
                                                             เพิ่มเติม...
                                                         </a>
                                                     </Link>
