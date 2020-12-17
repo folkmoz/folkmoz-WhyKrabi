@@ -83,10 +83,26 @@ const tabs = [
 
 const Section3 = () => {
     const [currentActive, setCurrentActive] = React.useState(0)
+    const [maxHeight, setMaxHeight] = React.useState(0)
 
     const selectTab = React.useCallback((index) => setCurrentActive(index),[])
 
     const maxWidth768 = useMediaQuery('(max-width: 768px)')
+
+    React.useEffect(() => {
+        let offsetHeight = []
+
+        const items = document.querySelectorAll('.item')
+
+        if (items.length !== 0) {
+            console.log(items)
+            items.forEach(i => offsetHeight.push(i.offsetHeight))
+            console.log(offsetHeight)
+            setMaxHeight(Math.max.apply(null, offsetHeight))
+        }
+
+
+    }, [maxWidth768])
 
 
     return (
@@ -124,7 +140,7 @@ const Section3 = () => {
                                     {
                                         tabs.map((item, index) => (
                                             <span className={'flex-grow-0 flex-shrink-0 flex-basis-auto max-w-full h-full px-2'} key={item.title}>
-                                                <div className={'relative w-full max-w-5xl md:max-w-3xl'} style={{transform: 'translateY(20px)' }}>
+                                                <div className={'relative w-full max-w-5xl md:max-w-3xl'} style={{marginBottom: -20}}>
                                                     <Image
                                                         src={item.image}
                                                         alt={item.title}
@@ -133,7 +149,7 @@ const Section3 = () => {
                                                         objectFit={"cover"}
                                                     />
                                                 </div>
-                                                <div style={{ minHeight: 290}} className={'py-8 bg-white text-black px-8 max-w-3xl h-full flex flex-col justify-between'}>
+                                                <div style={{height: maxHeight === 0 ? 'auto' : maxHeight}} className={'item py-8 bg-white text-black pl-8 pr-4 max-w-3xl h-full flex flex-col justify-between'}>
                                                     <span className={'text-4xl'}>{item.title}</span>
                                                     <p className={'text-gray-500 mt-2'}>{item.sub}</p>
                                                     <Link
