@@ -2,6 +2,8 @@ import React from "react";
 import Link from "next/link";
 import styled from 'styled-components'
 
+import { Squash as Hamburger } from "hamburger-react";
+
 import {Toolbar} from '@material-ui/core'
 import {useScroll} from "../../hooks/useScroll";
 
@@ -51,32 +53,42 @@ const menu = [
 
 export const Navbar = () => {
 
-    const { offset, isScroll } = useScroll()
+    const [isCollapse, setIsCollapse] = React.useState()
 
+    const { isScroll } = useScroll()
 
 
     return (
         <Header active={isScroll ? true : undefined}>
             <Toolbar className={'h-full'}>
                 <Nav
-                    className={'px-5 flex justify-between w-full'}
+                    className={'px-5 flex justify-between items-center w-full flex-col md:flex-row'}
                     active={isScroll ? true : undefined }
                 >
-                    <div className={'brand w-1/2'} >
+                    <div className={'brand w-full flex justify-between md:w-1/3'} >
                         <Link href={'/'}>
                             <a>
                                 <em>w</em>
                                 hykrabi
                             </a>
                         </Link>
+                        <span className={'md:d-none'}>
+                            <Hamburger
+                                hideOutline
+                                size={25}
+                                color={'#f7c552'}
+                                toggle={setIsCollapse}
+                                toggled={isCollapse}
+                            />
+                        </span>
                     </div>
-                    <div className={'menu w-1/2'}>
-                        <ul className={'flex sm:flex-col md:flex-row justify-around items-center h-full'}>
+                    <div className={`menu w-full  justify-end duration-200 transition-all ${isCollapse ? 'block visible' : 'd-none'} md:w-4/6 md:mr-4 md:flex`}>
+                        <ul className={'flex sm:flex-col md:flex-row justify-around items-center h-full '}>
                             {
                                 menu.map(e => (
                                     <li
                                         key={e}
-                                        className={`cursor-pointer ${isScroll ? 'text-black' : 'text-white'} p-2 hover:text-yellow-400`}><span>{e}</span></li>
+                                        className={`md:cursor-pointer ${isScroll ? 'text-black' : 'text-white'} p-2 mx-2 hover:text-yellow-400`}><span>{e}</span></li>
                                 ))
                             }
                         </ul>

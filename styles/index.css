@@ -27,4 +27,10 @@ a {
     .d-none {
         display: none;
     }
+
+    @variants responsive {
+        .d-none {
+            display: none;
+        }
+    }
 }

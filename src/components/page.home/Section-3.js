@@ -92,7 +92,7 @@ const Section3 = () => {
                                 tabs.map((tab, i) => (
                                     <li
                                         key={tab.title}
-                                        className={`py-2 px-6 my-8 cursor-pointer ${i === currentActive ? 'text-yellow-400' : 'text-black'} text-center bg-white hover:text-yellow-400 shadow-md max-w-xs`}
+                                        className={`py-2 px-6 my-8 md:cursor-pointer ${i === currentActive ? 'text-yellow-400' : 'text-black'} text-center bg-white hover:text-yellow-400 shadow-md max-w-xs`}
                                         onClick={() => selectTab(i)}
                                     >
                                         {tab.title}
