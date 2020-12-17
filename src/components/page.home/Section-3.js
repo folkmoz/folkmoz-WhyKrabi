@@ -2,11 +2,10 @@ import React from 'react';
 import Image from "next/image";
 import Link from "next/link";
 import styled from "styled-components";
-import {Divider} from "@material-ui/core";
+import {Divider, useMediaQuery} from "@material-ui/core";
 
 const Blogs =styled.section`
   height: auto;
-  min-height: 95vh;
   width: 100%;
   position: relative;
   background: url("./images/home/hotel-bg.jpg") center/cover fixed no-repeat;
@@ -21,9 +20,13 @@ const LeftSide = styled.div`
     padding: 3rem 1.8rem 1.5rem;
     display: flex;
     justify-content: flex-end;
+    color: #fff;
+    width: 33.333333%;
   
     @media (max-width: 768px) {
       justify-content: center;
+      width: 100%;
+      display: none;
     }
         
   :before {
@@ -83,11 +86,13 @@ const Section3 = () => {
 
     const selectTab = React.useCallback((index) => setCurrentActive(index),[])
 
+    const maxWidth768 = useMediaQuery('(max-width: 768px)')
+
 
     return (
         <Blogs>
             <div className={'relative flex flex-col-reverse w-full h-full z-1 md:flex-row'}>
-                <LeftSide className={'w-full text-white md:w-1/3'}>
+                <LeftSide>
                     <div style={{maxWidth: 350}}>
                         <h2 className={'text-2xl'}>แหล่งข้อมูลต่าง ๆ</h2>
                         <Divider variant={"fullWidth"} className={'bg-white my-5'} />
@@ -111,36 +116,65 @@ const Section3 = () => {
                         </ul>
                     </div>
                 </LeftSide>
-                <div className={'w-full text-white py-16 px-12 h-full md:w-2/3'}>
+                <div className={'w-full text-white h-full pl-4 pr-6 py-16 md:px-12  md:w-2/3'}>
                     <div className={'h-full'}>
                         {
-                            tabs.map((item, index) => (
-                                <span className={`${currentActive === index ? 'block' : 'd-none'}`} key={item.title}>
-                                    <div className={'relative w-full max-w-3xl'} style={{transform: 'translateY(20px)' }}>
-                                        <Image
-                                            src={item.image}
-                                            alt={item.title}
-                                            width={770}
-                                            height={420}
-                                            objectFit={"cover"}
-                                        />
-                                    </div>
-                                    <div className={'py-8 bg-white text-black px-8 max-w-3xl'}>
-                                        <span className={'text-4xl'}>{item.title}</span>
-                                        <p className={'text-gray-500 mt-2'}>{item.sub}</p>
-                                        <Link
-                                            href={item.path}
-                                        >
-                                            <a className={'rounded text-white mt-4 inline-block py-2 px-4 bg-gradient-to-r from-blue-400 to-blue-500 hover:from-pink-500 hover:to-orange-500'}>
-                                                เพิ่มเติม...
-                                            </a>
-                                        </Link>
-                                    </div>
-                                </span>
-                            ))
+                            maxWidth768 ? (
+                                <div className={'flex flex-nowrap overflow-x-auto'}>
+                                    {
+                                        tabs.map((item, index) => (
+                                            <span className={'flex-grow-0 flex-shrink-0 flex-basis-auto max-w-full h-full px-2'} key={item.title}>
+                                                <div className={'relative w-full max-w-5xl md:max-w-3xl'} style={{transform: 'translateY(20px)' }}>
+                                                    <Image
+                                                        src={item.image}
+                                                        alt={item.title}
+                                                        width={770}
+                                                        height={420}
+                                                        objectFit={"cover"}
+                                                    />
+                                                </div>
+                                                <div style={{maxHeight: 240, minHeight: 240}} className={'py-8 bg-white text-black px-8 max-w-3xl h-full'}>
+                                                    <span className={'text-4xl'}>{item.title}</span>
+                                                    <p className={'text-gray-500 mt-2'}>{item.sub}</p>
+                                                    <Link
+                                                        href={item.path}
+                                                    >
+                                                        <a className={'rounded text-white mt-4 inline-block py-2 px-4 bg-gradient-to-r from-blue-400 to-blue-500 hover:from-pink-500 hover:to-orange-500'}>
+                                                            เพิ่มเติม...
+                                                        </a>
+                                                    </Link>
+                                                </div>
+                                            </span>
+                                        ))
+                                    }
+                                </div>
+                            ) : (
+                                tabs.map((item, index) => (
+                                    <span className={`${currentActive === index ? 'block' : 'd-none'}`} key={item.title}>
+                                        <div className={'relative w-full max-w-5xl md:max-w-3xl'} style={{transform: 'translateY(20px)' }}>
+                                            <Image
+                                                src={item.image}
+                                                alt={item.title}
+                                                width={770}
+                                                height={420}
+                                                objectFit={"cover"}
+                                            />
+                                        </div>
+                                        <div className={'py-8 bg-white text-black px-8 max-w-3xl'}>
+                                            <span className={'text-4xl'}>{item.title}</span>
+                                            <p className={'text-gray-500 mt-2'}>{item.sub}</p>
+                                            <Link
+                                                href={item.path}
+                                            >
+                                                <a className={'rounded text-white mt-4 inline-block py-2 px-4 bg-gradient-to-r from-blue-400 to-blue-500 hover:from-pink-500 hover:to-orange-500'}>
+                                                    เพิ่มเติม...
+                                                </a>
+                                            </Link>
+                                        </div>
+                                    </span>
+                                ))
+                            )
                         }
-
-
                     </div>
                 </div>
             </div>

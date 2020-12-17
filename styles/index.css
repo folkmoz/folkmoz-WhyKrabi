@@ -28,6 +28,10 @@ a {
         display: none;
     }
 
+    .flex-basis-auto {
+        flex-basis: auto;
+    }
+
     @variants responsive {
         .d-none {
             display: none;
