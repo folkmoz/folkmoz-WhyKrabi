@@ -95,9 +95,7 @@ const Section3 = () => {
         const items = document.querySelectorAll('.item')
 
         if (items.length !== 0) {
-            console.log(items)
             items.forEach(i => offsetHeight.push(i.offsetHeight))
-            console.log(offsetHeight)
             setMaxHeight(Math.max.apply(null, offsetHeight))
         }
 
