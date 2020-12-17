@@ -123,7 +123,7 @@ const Section3 = () => {
                                 <div className={'flex flex-nowrap overflow-x-auto'}>
                                     {
                                         tabs.map((item, index) => (
-                                            <div className={'flex-grow-0 flex-shrink-0 flex-basis-auto max-w-full h-full px-2'} key={item.title}>
+                                            <span className={'flex-grow-0 flex-shrink-0 flex-basis-auto max-w-full h-full px-2'} key={item.title}>
                                                 <div className={'relative w-full max-w-5xl md:max-w-3xl'} style={{transform: 'translateY(20px)' }}>
                                                     <Image
                                                         src={item.image}
@@ -144,7 +144,7 @@ const Section3 = () => {
                                                         </a>
                                                     </Link>
                                                 </div>
-                                            </div>
+                                            </span>
                                         ))
                                     }
                                 </div>
