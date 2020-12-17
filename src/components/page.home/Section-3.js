@@ -71,17 +71,9 @@ const tabs = [
 
 const Section3 = () => {
     const [currentActive, setCurrentActive] = React.useState(0)
-    const [currentTab, setCurrentTab] = React.useState([])
 
     const selectTab = React.useCallback((index) => setCurrentActive(index),[])
 
-    React.useEffect(() => {
-        setCurrentTab(tabs
-            .filter((e, i) => i === currentActive)
-            .map(d => d)
-        )
-
-    }, [currentActive])
 
     return (
         <Blogs>
