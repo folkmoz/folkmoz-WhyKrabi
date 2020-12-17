@@ -113,8 +113,8 @@ const Section3 = () => {
                 <div className={'w-2/3 text-white py-16 px-12 h-full'}>
                     <div className={'h-full'}>
                         {
-                            currentTab.map(item => (
-                                <React.Fragment key={item.title}>
+                            tabs.map((item, index) => (
+                                <span className={`${currentActive === index ? 'block' : 'd-none'}`} key={item.title}>
                                     <div className={'relative w-full max-w-3xl'} style={{transform: 'translateY(20px)' }}>
                                         <Image
                                             src={item.image}
@@ -135,7 +135,7 @@ const Section3 = () => {
                                             </a>
                                         </Link>
                                     </div>
-                                </React.Fragment>
+                                </span>
                             ))
                         }
 

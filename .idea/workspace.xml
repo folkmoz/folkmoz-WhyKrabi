@@ -2,39 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="96a5fda8-4ae8-4c18-a7ed-451d502aa3c8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.babelrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/postcss.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/category/fd.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/category/ht.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/category/ky.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/category/lc.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/category/tp.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/category/tr.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/home/hotel-bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/home/sec-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/home/whykrabi-bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/icons/service_icon_01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/icons/service_icon_02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/icons/service_icon_03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/icons/service_icon_04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header/Header.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/page.home/Section-2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/page.home/Section-3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hooks/useScroll.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/_app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/_document.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/sharp/build/Release/libglib-2.0-0.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/sharp/build/Release/libgobject-2.0-0.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/sharp/build/Release/libvips-42.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/sharp/build/Release/libvips-cpp.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/sharp/build/Release/sharp.node" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/page.home/Section-3.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/page.home/Section-3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,6 +74,7 @@
       <workItem from="1607926247007" duration="1863000" />
       <workItem from="1608087640596" duration="24553000" />
       <workItem from="1608141015607" duration="848000" />
+      <workItem from="1608174553277" duration="381000" />
     </task>
     <servers />
   </component>
