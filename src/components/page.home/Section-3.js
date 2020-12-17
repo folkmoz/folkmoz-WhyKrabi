@@ -133,13 +133,13 @@ const Section3 = () => {
                                                         objectFit={"cover"}
                                                     />
                                                 </div>
-                                                <div style={{maxHeight: 240, minHeight: 240}} className={'py-8 bg-white text-black px-8 max-w-3xl h-full'}>
+                                                <div style={{ minHeight: 290}} className={'py-8 bg-white text-black px-8 max-w-3xl h-full flex flex-col justify-between'}>
                                                     <span className={'text-4xl'}>{item.title}</span>
                                                     <p className={'text-gray-500 mt-2'}>{item.sub}</p>
                                                     <Link
                                                         href={item.path}
                                                     >
-                                                        <a className={'rounded text-white mt-4 inline-block py-2 px-4 bg-gradient-to-r from-blue-400 to-blue-500 hover:from-pink-500 hover:to-orange-500'}>
+                                                        <a className={'rounded w-2/6 text-white mt-4 inline-block py-2 px-4 bg-gradient-to-r from-blue-400 to-blue-500 hover:from-pink-500 hover:to-orange-500'}>
                                                             เพิ่มเติม...
                                                         </a>
                                                     </Link>
