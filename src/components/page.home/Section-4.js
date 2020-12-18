@@ -61,6 +61,7 @@ const Section4 = () => {
                             width={750}
                             height={270}
                             objectFit={'contain'}
+                            alt={'mobile-picture'}
                         />
                     </span>
                 </div>
