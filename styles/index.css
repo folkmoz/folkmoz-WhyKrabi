@@ -2,12 +2,20 @@
 
 @tailwind base;
 
+* {
+    font-family: Roboto, sans-serif;
+}
+
 body {
     min-height: 150vh;
 }
 
 a {
     text-decoration: none;
+}
+
+.typed-cursor {
+    color: #fff;
 }
 
 
@@ -32,9 +40,31 @@ a {
         flex-basis: auto;
     }
 
+    .text-40 {
+        font-size: 40px;
+    }
+
+    .text-1xl {
+        font-size: 18px;
+    }
+
+    .transition-02-all {
+        transition: 0.2s all;
+    }
+
+    .bg-dark {
+        background-color: #182140;
+    }
+
+    .mt-32 {
+        margin-top: 8rem;
+    }
+
     @variants responsive {
         .d-none {
             display: none;
         }
+
     }
+
 }
