@@ -60,6 +60,7 @@ const Section4 = () => {
                             src={'/images/home/3dbg.png'}
                             width={750}
                             height={270}
+                            objectFit={'contain'}
                         />
                     </span>
                 </div>
