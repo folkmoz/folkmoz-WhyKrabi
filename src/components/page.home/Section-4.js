@@ -15,7 +15,7 @@ const Section4 = () => {
 
     return (
         <App>
-            <div className={'flex justify-center max-w-screen-2xl py-12 md:p-16'}>
+            <div className={'flex justify-center max-w-screen-2xl md:mx-auto md:my-0 py-12 md:p-16'}>
                 <div className={'flex flex-col items-center w-full'}>
                     <span className={'text-white font-bold text-40 mb-4'}>
                         Love Krabi
