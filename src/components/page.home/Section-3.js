@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from 'next/router'
 import styled from "styled-components";
 import {Divider, useMediaQuery} from "@material-ui/core";
 
@@ -82,11 +83,16 @@ const tabs = [
     }
 ]
 
-const Section3 = () => {
+const Section3 = ({ id }) => {
     const [currentActive, setCurrentActive] = React.useState(0)
     const [maxHeight, setMaxHeight] = React.useState(0)
 
-    const selectTab = React.useCallback((index) => setCurrentActive(index),[])
+    const router = useRouter()
+
+    const selectTab = React.useCallback((index, title) => {
+        setCurrentActive(index)
+        router.push(`/?${title}`, undefined, { shallow: true })
+    },[])
 
     const maxWidth768 = useMediaQuery('(max-width: 768px)')
 
@@ -105,7 +111,7 @@ const Section3 = () => {
 
 
     return (
-        <Blogs>
+        <Blogs data-scroll={id}>
             <div className={'relative flex flex-col-reverse w-full h-full z-1 md:flex-row'}>
                 <LeftSide>
                     <div style={{maxWidth: 350}}>
@@ -122,7 +128,7 @@ const Section3 = () => {
                                     <li
                                         key={tab.title}
                                         className={`py-2 px-6 my-8 select-none md:select-auto md:cursor-pointer ${i === currentActive ? 'text-white bg-yellow-600' : 'text-black bg-white hover:text-yellow-400'} text-center shadow-md max-w-xs`}
-                                        onClick={() => selectTab(i)}
+                                        onClick={() => selectTab(i, tab.title)}
                                     >
                                         {tab.title}
                                     </li>

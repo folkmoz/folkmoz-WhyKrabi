@@ -63,11 +63,11 @@ const mockData = [
     },
 ]
 
-const Section2 = () => {
+const Section2 = ({ id }) => {
 
     return (
         <>
-            <AboutKrabi>
+            <AboutKrabi data-scroll={id}>
                 <Container maxWidth={"lg"} className={'flex flex-col justify-around items-center h-3/4 md:flex-row'}>
                     {
                         mockData.map((e, i) => (

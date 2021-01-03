@@ -48,13 +48,33 @@ const Nav = styled.div `
       
 `
 
+
 const menu = [
-    'หน้าแรก','ทำไมต้องมากระบี่','บล็อก','แอพลิเคชั่น','ผู้จัดทำ'
+    {
+        header: 'หน้าแรก',
+        id: 'top'
+    },
+    {
+        header: 'ทำไมต้องมากระบี่',
+        id: 'whykrabi'
+    },
+    {
+        header: 'บล็อก',
+        id: 'tabs'
+    },
+    {
+        header: 'แอพลิเคชั่น',
+        id: 'app'
+    },
+    {
+        header: 'ผู้จัดทำ',
+    }
 ]
 
-export const Navbar = () => {
+export const Navbar = ({ func }) => {
 
-    const [isCollapse, setIsCollapse] = React.useState()
+    const [isCollapse, setIsCollapse] = React.useState(false)
+    const [currentMenu, setCurrentMenu] = React.useState(0)
 
     const { isScroll } = useScroll()
 
@@ -89,10 +109,25 @@ export const Navbar = () => {
                     <div className={`menu w-full  justify-end md:mr-4 md:flex`}>
                         <ul className={'flex flex-col md:flex-row justify-around items-center h-full '}>
                             {
-                                menu.map(e => (
-                                    <li
-                                        key={e}
-                                        className={`md:cursor-pointer ${isScroll ? 'text-black' : 'text-white'} p-2 mx-2 hover:text-yellow-400`}><span>{e}</span></li>
+                                menu.map((e, index) => (
+                                    index !== menu.length-1 ? (
+                                        <li
+                                            key={index}
+                                            className={`md:cursor-pointer ${!isScroll ? 'text-white': currentMenu === index ? 'text-yellow-400' : 'text-black' } p-2 mx-2 hover:text-yellow-400`}
+                                            onClick={()=>func(e.id, setCurrentMenu(index))}
+                                        >
+                                            <span>{e.header}</span>
+                                        </li>
+                                    ) : (
+                                        <Link href={'/team'} key={index}>
+                                            <a>
+                                                <li
+                                                    className={`md:cursor-pointer ${isScroll ? 'text-black' : 'text-white'} p-2 mx-2 hover:text-yellow-400`}>
+                                                    <span>{e.header}</span>
+                                                </li>
+                                            </a>
+                                        </Link>
+                                )
                                 ))
                             }
                         </ul>

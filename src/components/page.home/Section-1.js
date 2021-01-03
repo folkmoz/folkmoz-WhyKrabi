@@ -11,14 +11,14 @@ const Parallax = styled.section`
   padding-top: 35vh;
 `
 
-const Section1 = () => {
+const Section1 = ({ id }) => {
 
     const { offset } = useScroll()
 
 
     return (
         <>
-            <Parallax style={{backgroundPosition: `center calc(50% + ${offset * 0.5}px)`}} />
+            <Parallax data-scroll={id} style={{backgroundPosition: `center calc(50% + ${offset * 0.5}px)`}} />
         </>
     );
 }
