@@ -20,7 +20,7 @@ const Home = () => {
 
     return (
         <>
-            <Navbar func={scrollCurrentSection}/>
+            <Navbar func={scrollCurrentSection} path={'/'}/>
             <Section1 id={'top'} />
             <Section2 id={'whykrabi'} />
             <Section3 id={'tabs'}/>

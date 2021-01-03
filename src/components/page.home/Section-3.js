@@ -91,7 +91,7 @@ const Section3 = ({ id }) => {
 
     const selectTab = React.useCallback((index, title) => {
         setCurrentActive(index)
-        router.push(`/?${title}`, undefined, { shallow: true })
+        router.replace(`/?@${title}`, undefined, { shallow: true })
     },[])
 
     const maxWidth768 = useMediaQuery('(max-width: 768px)')

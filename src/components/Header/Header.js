@@ -7,6 +7,7 @@ import {Collapse} from "@material-ui/core";
 
 import {Toolbar, useMediaQuery} from '@material-ui/core'
 import {useScroll} from "../../hooks/useScroll";
+import {useRouter} from "next/router";
 
 const Header = styled.header`
     background: transparent;
@@ -35,6 +36,14 @@ const Nav = styled.div `
             ${({active}) => active && `
             color: #000;
         `}
+            
+      h1 {
+        cursor: pointer;
+              
+          @media (max-width: 768px) {
+              cursor: default;
+          }
+      }
 
       em {
         font-style: normal;
@@ -69,15 +78,22 @@ const menu = [
     }
 ]
 
-export const Navbar = ({ func }) => {
+export const Navbar = ({ func, path }) => {
 
     const [isCollapse, setIsCollapse] = React.useState(false)
     const [currentMenu, setCurrentMenu] = React.useState(0)
 
     const { isScroll } = useScroll()
+    const router = useRouter()
 
     const maxWidth768px = useMediaQuery('(max-width: 768px)')
 
+    const scrollToTop = () => {
+        if (router.pathname === '/') func('top')
+
+        else router.push('/', undefined, { shallow: true })
+
+    }
 
     return (
         <Header active={isScroll ? true : undefined}>
@@ -87,12 +103,10 @@ export const Navbar = ({ func }) => {
                     active={isScroll ? true : undefined }
                 >
                     <div className={'brand w-full flex justify-between md:w-1/3'} >
-                        <Link href={'/'}>
-                            <a>
+                            <h1 onClick={scrollToTop}>
                                 <em>w</em>
                                 hykrabi
-                            </a>
-                        </Link>
+                            </h1>
                         <span className={'md:d-none'}>
                             <Hamburger
                                 hideOutline
@@ -107,7 +121,7 @@ export const Navbar = ({ func }) => {
                     <div className={`menu w-full  justify-end md:mr-4 md:flex`}>
                         <ul className={'flex flex-col md:flex-row justify-around items-center h-full '}>
                             {
-                                menu.map((e, index) => (
+                                path === '/' && menu.map((e, index) => (
                                     index !== menu.length-1 ? (
                                         <li
                                             key={index}
