@@ -32,8 +32,6 @@ const Nav = styled.div `
         font-family: 'Roboto', sans-serif;
         font-weight: 700;
         font-size: 25px;
-        transition: .2s linear;
-        scroll-behavior: smooth;
             ${({active}) => active && `
             color: #000;
         `}
@@ -119,15 +117,18 @@ export const Navbar = ({ func }) => {
                                             <span>{e.header}</span>
                                         </li>
                                     ) : (
-                                        <Link href={'/team'} key={index}>
-                                            <a className={'md:cursor-pointer cursor-default'}>
-                                                <li
-                                                    className={`${isScroll ? 'text-black' : 'text-white'} p-2 mx-2 hover:text-yellow-400`}>
+                                        <li
+                                            className={`md:cursor-pointer cursor-default ${isScroll ? 'text-black' : 'text-white'} p-2 mx-2 hover:text-yellow-400`}
+                                            key={index}
+                                        >
+                                            <Link href={'/team'}>
+                                                <a>
                                                     <span>{e.header}</span>
-                                                </li>
-                                            </a>
-                                        </Link>
-                                )
+                                                </a>
+                                            </Link>
+                                        </li>
+
+                                    )
                                 ))
                             }
                         </ul>
