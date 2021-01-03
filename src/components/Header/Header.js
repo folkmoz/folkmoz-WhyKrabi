@@ -113,16 +113,16 @@ export const Navbar = ({ func }) => {
                                     index !== menu.length-1 ? (
                                         <li
                                             key={index}
-                                            className={`md:cursor-pointer ${!isScroll ? 'text-white': currentMenu === index ? 'text-yellow-400' : 'text-black' } p-2 mx-2 hover:text-yellow-400`}
+                                            className={`cursor-default md:cursor-pointer ${!isScroll ? 'text-white': currentMenu === index ? 'text-yellow-400' : 'text-black' } p-2 mx-2 hover:text-yellow-400`}
                                             onClick={()=>func(e.id, setCurrentMenu(index))}
                                         >
                                             <span>{e.header}</span>
                                         </li>
                                     ) : (
                                         <Link href={'/team'} key={index}>
-                                            <a>
+                                            <a className={'md:cursor-pointer cursor-default'}>
                                                 <li
-                                                    className={`md:cursor-pointer ${isScroll ? 'text-black' : 'text-white'} p-2 mx-2 hover:text-yellow-400`}>
+                                                    className={`${isScroll ? 'text-black' : 'text-white'} p-2 mx-2 hover:text-yellow-400`}>
                                                     <span>{e.header}</span>
                                                 </li>
                                             </a>
